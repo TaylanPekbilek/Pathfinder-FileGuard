@@ -9,7 +9,7 @@
 
 Pathfinder FileGuard is a small, free, open-source Claude Code plugin that prevents an unchanged file or file range from being read repeatedly into the same active agent context. Its purpose is to stop avoidable context growth and token usage before the repeated `Read` tool call executes.
 
-FileGuard is the free entry product in the Pathfinder family. It must remain narrow, transparent, local, and easy to uninstall. The future paid LoopGuard product and the future EvidenceGuard product are separate projects and are not part of this repository.
+FileGuard must remain narrow, transparent, local, and easy to uninstall. This repository is limited to protecting against repeated reads of unchanged files in the same active context.
 
 ## 2. Product Positioning
 
@@ -19,7 +19,7 @@ The user promise is:
 
 > Stop Claude Code from loading the same unchanged file into the same active context twice without a clear override.
 
-FileGuard is free. Its business purpose is to establish trust, demonstrate measurable token savings, and create an audience for the separately developed LoopGuard product.
+FileGuard is free. Its purpose is to establish trust, demonstrate measurable token savings, and improve through real-world community feedback.
 
 ## 3. Target User and Platform
 
@@ -215,12 +215,6 @@ With focused work and available Codex quota:
 
 The target is a testable MVP in three to five focused days and a public beta in approximately one to two weeks. These are estimates, not guarantees; Claude Code hook behavior and cross-platform findings may change the schedule.
 
-## 15. Product-Family Boundary
+## 15. Support FileGuard
 
-The following roadmap is recorded for positioning only and creates no implementation scope in FileGuard:
-
-1. **Pathfinder FileGuard:** Free duplicate unchanged-read protection.
-2. **Pathfinder LoopGuard:** A future paid product for repeated scans, failed approaches, and unchanged external-service state.
-3. **Pathfinder EvidenceGuard:** A future separate product for source-grounded verification of very large analysis documents.
-
-No code for LoopGuard or EvidenceGuard is included in the FileGuard repository.
+If FileGuard saves you time or tokens, please consider starring the repository and sharing it with other Claude Code users. Your experience and feedback will help guide the useful tools we build next.

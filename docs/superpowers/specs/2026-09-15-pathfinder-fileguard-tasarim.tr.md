@@ -9,7 +9,7 @@
 
 Pathfinder FileGuard; Claude Code'un, değişmemiş bir dosyayı veya aynı dosya aralığını aynı aktif ajan bağlamına tekrar okumasını önleyen küçük, ücretsiz ve açık kaynaklı bir eklentidir. Amacı, tekrarlanan `Read` işlemi çalışmadan önce gereksiz bağlam büyümesini ve token tüketimini durdurmaktır.
 
-FileGuard, Pathfinder ürün ailesinin ücretsiz giriş ürünüdür. Kapsamı dar, davranışı şeffaf, çalışması yerel ve kaldırılması kolay olacaktır. Gelecekteki ücretli LoopGuard ile EvidenceGuard ayrı projelerdir ve bu deponun kapsamına girmez.
+FileGuard'ın kapsamı dar, davranışı şeffaf, çalışması yerel ve kaldırılması kolay olacaktır. Bu depo yalnızca aynı aktif bağlamda değişmemiş dosyaların tekrar okunmasını engelleyen FileGuard ürününü kapsar.
 
 ## 2. Ürünün Konumlandırılması
 
@@ -19,7 +19,7 @@ Kullanıcıya verdiğimiz söz:
 
 > Claude Code'un, aynı aktif bağlamda bulunan değişmemiş dosyayı açık bir geçiş izni olmadan yeniden yüklemesini durdur.
 
-FileGuard ücretsiz olacaktır. Ticari amacı güven oluşturmak, ölçülebilir token tasarrufu göstermek ve daha sonra ayrı geliştirilecek LoopGuard için kullanıcı kitlesi oluşturmaktır.
+FileGuard ücretsiz olacaktır. Amacı güven oluşturmak, ölçülebilir token tasarrufu göstermek ve gerçek kullanıcı geri bildirimleriyle gelişmektir.
 
 ## 3. Hedef Kullanıcı ve Platform
 
@@ -215,12 +215,6 @@ Odaklı çalışma ve yeterli Codex kotasıyla:
 
 Hedef, üç-beş yoğun çalışma gününde test edilebilir MVP ve yaklaşık bir-iki haftada herkese açık beta çıkarmaktır. Bunlar garanti değil tahmindir; Claude Code hook davranışları ve farklı platformlardaki bulgular takvimi değiştirebilir.
 
-## 15. Ürün Ailesinin Sınırı
+## 15. FileGuard'a Destek Olun
 
-Aşağıdaki yol haritası yalnızca konumlandırmayı kaydeder; FileGuard için uygulama kapsamı oluşturmaz:
-
-1. **Pathfinder FileGuard:** Değişmemiş tekrar okumaları engelleyen ücretsiz ürün.
-2. **Pathfinder LoopGuard:** Tekrarlanan taramalar, başarısız yaklaşımlar ve değişmemiş dış servis durumu için gelecekte geliştirilecek ücretli ürün.
-3. **Pathfinder EvidenceGuard:** Çok büyük analiz belgelerinde kaynak temelli doğrulama için gelecekte geliştirilecek ayrı ürün.
-
-FileGuard deposunda LoopGuard veya EvidenceGuard kodu bulunmayacaktır.
+FileGuard size zaman veya token kazandırdıysa GitHub deposuna yıldız vererek ve Claude Code kullanan dostlarınızla paylaşarak destek olabilirsiniz. Deneyimleriniz ve geri bildirimleriniz, gelecekte geliştireceğimiz yararlı araçlara yön verecektir.
