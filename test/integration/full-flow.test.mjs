@@ -73,7 +73,18 @@ test("the release flow blocks, reports, bypasses once, and resets on compact", a
     cwd: projectDir,
     tool_use_id: toolUseId,
     ...(event === postRead
-      ? { tool_response: { content: [{ type: "text", text: deliveredText }] } }
+      ? {
+          tool_response: {
+            type: "text",
+            file: {
+              filePath,
+              content: deliveredText,
+              numLines: 1,
+              startLine: 1,
+              totalLines: 1,
+            },
+          },
+        }
       : {}),
   });
 

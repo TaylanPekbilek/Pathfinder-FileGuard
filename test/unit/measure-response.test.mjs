@@ -20,6 +20,22 @@ test("measureResponseText counts documented content shapes", () => {
   );
 });
 
+test("measureResponseText counts Claude Code 2.1.270 Read file content", () => {
+  assert.equal(
+    measureResponseText({
+      type: "text",
+      file: {
+        filePath: "C:\\project\\sample.txt",
+        content: "first line\nsecond line\n",
+        numLines: 3,
+        startLine: 1,
+        totalLines: 3,
+      },
+    }),
+    23,
+  );
+});
+
 test("measureResponseText counts Unicode code points rather than UTF-16 units", () => {
   assert.equal(measureResponseText("🛡️"), 2);
 });

@@ -11,6 +11,15 @@ export function measureResponseText(response) {
     return null;
   }
 
+  if (
+    response.type === "text"
+    && response.file !== null
+    && typeof response.file === "object"
+    && typeof response.file.content === "string"
+  ) {
+    return countCodePoints(response.file.content);
+  }
+
   if (typeof response.content === "string") {
     return countCodePoints(response.content);
   }

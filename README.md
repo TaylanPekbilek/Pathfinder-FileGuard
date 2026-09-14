@@ -49,6 +49,8 @@ FileGuard currently watches Claude Code's `Read` tool only. See [Limitations](LI
 - Claude Code 2.1.270 or newer
 - Node.js 20 or newer
 
+The release candidate has been verified on Windows with Claude Code 2.1.270 in a restricted, read-only live session. A sequential unchanged duplicate was blocked before content was returned; the one-read override passed exactly once; the next duplicate was blocked again; and a compacted context allowed a fresh read.
+
 ## Try it locally
 
 Clone the repository, open a terminal in its root, and run:
