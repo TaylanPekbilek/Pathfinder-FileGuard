@@ -1,0 +1,18 @@
+{
+  "name": "fileguard",
+  "displayName": "Pathfinder FileGuard",
+  "version": "0.1.0",
+  "description": "Blocks proven duplicate reads of unchanged files in the same Claude Code context.",
+  "author": {
+    "name": "TaylanPekbilek",
+    "email": "taylan.pekbilek@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "tokens",
+    "context",
+    "read",
+    "local"
+  ]
+}

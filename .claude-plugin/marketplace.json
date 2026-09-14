@@ -1,0 +1,15 @@
+{
+  "name": "pathfinder-tools",
+  "owner": {
+    "name": "TaylanPekbilek",
+    "email": "taylan.pekbilek@gmail.com"
+  },
+  "description": "Small, local Claude Code tools from Pathfinder.",
+  "plugins": [
+    {
+      "name": "fileguard",
+      "source": "./plugins/fileguard",
+      "description": "Blocks proven duplicate reads of unchanged files in the same Claude Code context."
+    }
+  ]
+}
