@@ -4,6 +4,12 @@ import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 const repoRoot = fileURLToPath(new URL("../..", import.meta.url));
+const claudeProbe = spawnSync("claude", ["--version"], {
+  cwd: repoRoot,
+  encoding: "utf8",
+  shell: false,
+});
+const claudeTest = claudeProbe.error?.code === "ENOENT" ? test.skip : test;
 
 function validatePlugin(target) {
   return spawnSync("claude", ["plugin", "validate", target], {
@@ -13,7 +19,7 @@ function validatePlugin(target) {
   });
 }
 
-test("Claude Code accepts the FileGuard marketplace", () => {
+claudeTest("Claude Code accepts the FileGuard marketplace", () => {
   const result = validatePlugin(".");
   const output = `${result.stdout}\n${result.stderr}`;
 
@@ -21,7 +27,7 @@ test("Claude Code accepts the FileGuard marketplace", () => {
   assert.doesNotMatch(output, /warning/i);
 });
 
-test("Claude Code accepts the FileGuard plugin package", () => {
+claudeTest("Claude Code accepts the FileGuard plugin package", () => {
   const result = validatePlugin("./plugins/fileguard");
   const output = `${result.stdout}\n${result.stderr}`;
 
