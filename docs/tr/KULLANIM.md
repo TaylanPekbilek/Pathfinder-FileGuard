@@ -6,6 +6,36 @@ FileGuard, bilgisayarınızda çalışan küçük bir Claude Code eklentisidir. 
 
 Başka bir yapay zekâ modeli çağırmaz, API veya sunucu kullanmaz, telemetri göndermez ve dosya içeriğini saklamaz.
 
+## 30 saniyede kurulum
+
+### En kolay yöntem
+
+Claude Code'u açın, aşağıdaki mesajı olduğu gibi gönderin ve kurulum izni istediğinde onaylayın:
+
+```text
+Bu depodaki Claude Code eklentisini kur ve etkinleştir:
+https://github.com/TaylanPekbilek/Pathfinder-FileGuard
+```
+
+Claude Code kurulumu otomatik yapamazsa aşağıdaki kesin yöntemi kullanın.
+
+### Komutlarla kurulum
+
+Claude Code içinde bu iki komutu sırayla çalıştırın:
+
+```text
+/plugin marketplace add TaylanPekbilek/Pathfinder-FileGuard
+/plugin install fileguard@pathfinder-tools
+```
+
+Yeni bir Claude Code oturumu açın ve kurulumun çalıştığını doğrulayın:
+
+```text
+/fileguard:report
+```
+
+Rapor görünüyorsa FileGuard kurulmuş ve çalışıyordur. API anahtarı, ücretli hesap veya ayrı bir sunucu gerekmez.
+
 ## 20 saniyelik örnek
 
 FileGuard olmadan:
@@ -59,7 +89,7 @@ FileGuard yalnızca açılan Claude Code oturumunda etkin olur. Paket kurulumu, 
 
 ## GitHub üzerinden kurulum
 
-Depo yayımlandıktan sonra Claude Code içinde sırasıyla şunları çalıştırın:
+Claude Code içinde sırasıyla şunları çalıştırın:
 
 ```text
 /plugin marketplace add TaylanPekbilek/Pathfinder-FileGuard
