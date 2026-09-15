@@ -1,5 +1,10 @@
 # Pathfinder FileGuard
 
+<p align="center">
+  <img src="docs/fileguard-demo.gif" alt="Pathfinder FileGuard blocking an unchanged duplicate read" width="800">
+</p>
+
+
 **Stop unchanged files from entering the same Claude Code context twice.**
 
 [Türkçe kullanım kılavuzu](docs/tr/KULLANIM.md)
