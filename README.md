@@ -4,7 +4,6 @@
   <img src="docs/fileguard-demo.gif" alt="Pathfinder FileGuard blocking an unchanged duplicate read" width="800">
 </p>
 
-
 **Stop unchanged files from entering the same Claude Code context twice.**
 
 [Türkçe kullanım kılavuzu](docs/tr/KULLANIM.md)
@@ -12,6 +11,34 @@
 FileGuard is a small, fully local Claude Code plugin. After a successful `Read`, it remembers the file content and requested range for the current context. If Claude tries to read that exact unchanged content again, FileGuard denies the duplicate before the file is returned.
 
 It does not call another model, use an API, send telemetry, or store file contents.
+
+## Install in 30 seconds
+
+### Easiest: ask Claude Code to install it
+
+Open Claude Code, paste the message below, and approve the installation when asked:
+
+```text
+Install and enable the Claude Code plugin from this repository:
+https://github.com/TaylanPekbilek/Pathfinder-FileGuard
+```
+
+### Manual installation
+
+If automatic installation is not available, run these two commands inside Claude Code:
+
+```text
+/plugin marketplace add TaylanPekbilek/Pathfinder-FileGuard
+/plugin install fileguard@pathfinder-tools
+```
+
+Start a new Claude Code session, then confirm FileGuard is active:
+
+```text
+/fileguard:report
+```
+
+No API key, account, paid service, or separate server is required. For step-by-step Turkish instructions, see the [Türkçe kullanım kılavuzu](docs/tr/KULLANIM.md).
 
 ## The 20-second example
 
@@ -68,7 +95,7 @@ FileGuard becomes active for that Claude Code session. No dependency installatio
 
 ## Install from the GitHub marketplace
 
-After this repository is published, run these inside Claude Code:
+Run these inside Claude Code:
 
 ```text
 /plugin marketplace add TaylanPekbilek/Pathfinder-FileGuard
