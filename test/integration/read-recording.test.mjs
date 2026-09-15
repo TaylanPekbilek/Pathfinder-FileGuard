@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, writeFile } from "node:fs/promises";
+import { mkdtemp, readFile, realpath, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -52,7 +52,7 @@ test("PreToolUse allows a first read and records only snapshot metadata", async 
   assert.equal(result.status, 0);
   assert.equal(result.stdout, "");
   assert.equal(result.stderr, "");
-  assert.equal(pending.path, filePath);
+  assert.equal(pending.path, await realpath(filePath));
   assert.equal(pending.offset, null);
   assert.equal(pending.limit, null);
   assert.equal(pending.size, 23);
